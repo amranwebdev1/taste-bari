@@ -21,11 +21,7 @@ export default function CartDrawer() {
   const total = subtotal + fee;
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
-  const waText = encodeURIComponent(
-    "আসসালামু আলাইকুম, আমি অর্ডার করতে চাই:\n" +
-      lines.map((l) => `• ${l.name} × ${bn(l.qty)} = ${bn(l.qty * l.price)} টাকা`).join("\n") +
-      `\nমোট: ${bn(total)} টাকা\nনাম: ${form.name}\nঠিকানা: ${form.address}`
-  );
+  
 
   async function submit(e) {
     e.preventDefault();
@@ -102,9 +98,7 @@ export default function CartDrawer() {
             <button disabled={busy} className="flex w-full items-center justify-center gap-2 rounded-2xl bg-ember py-4 text-lg font-semibold text-white disabled:opacity-60">
               <Send size={18} /> {busy ? "পাঠানো হচ্ছে..." : "অর্ডার নিশ্চিত করুন"}
             </button>
-            <a href={`https://wa.me/${SITE.wa}?text=${waText}`} target="_blank" rel="noopener noreferrer" className="flex w-full items-center justify-center gap-2 rounded-2xl border border-ink/20 py-3.5 font-semibold">
-              <MessageCircle size={18} /> বরং হোয়াটসঅ্যাপে পাঠাই
-            </a>
+            
           </form>
         )}
       </div>

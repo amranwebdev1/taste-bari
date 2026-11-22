@@ -1,8 +1,8 @@
-# দাওয়াত বিরিয়ানি: রেস্টুরেন্ট ল্যান্ডিং পেজ (Next.js 15 + Tailwind 4)
+# টেস্ট বাড়ি: রেস্টুরেন্ট ল্যান্ডিং পেজ (Next.js 15 + Tailwind 4)
 
 ```
 npm install
-cp .env.example .env.local   # Windows: copy .env.example .env.local
+cp .env.example .env.local   # Windows: copy .env.example .env
 npm run dev
 ```
 - লেখা, ফোন, হোয়াটসঅ্যাপ নম্বর: `src/data/site.js`
