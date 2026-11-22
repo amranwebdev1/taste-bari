@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #faf4ea;
+  --color-ink: #1c1511;
+  --color-ember: #d2401d;
+  --color-gold: #f2a516;
+  --color-sand: #efe4d0;
+  --font-sans: "Hind Siliguri", system-ui, sans-serif;
+  --font-display: "Tiro Bangla", "Hind Siliguri", serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .sheet { animation: none !important; } }
+
+@keyframes up { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+.sheet { animation: up 0.25s ease-out; }
